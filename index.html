@@ -29,9 +29,7 @@
     align-items: center;
   }
 
-  /* ── SETUP ── */
   #setup { width: 100%; max-width: 720px; padding: 48px 24px 80px; }
-
   #setup h1 { font-size: 2.8rem; font-weight: 900; text-align: center; letter-spacing: -1px; margin-bottom: 8px; }
   #setup .subtitle { text-align: center; color: var(--muted); margin-bottom: 48px; font-size: 1rem; }
 
@@ -43,215 +41,94 @@
     margin-bottom: 20px;
     position: relative;
   }
-
-  .q-card .q-num {
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--muted);
-    margin-bottom: 20px;
+  .q-num { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 20px; }
+  .remove-btn {
+    position: absolute; top: 20px; right: 20px;
+    background: none; border: 1px solid var(--border); color: var(--muted);
+    border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 0.8rem;
   }
-
-  .q-card .remove-btn {
-    position: absolute;
-    top: 20px; right: 20px;
-    background: none;
-    border: 1px solid var(--border);
-    color: var(--muted);
-    border-radius: 8px;
-    padding: 4px 10px;
-    cursor: pointer;
-    font-size: 0.8rem;
-    transition: border-color 0.15s, color 0.15s;
-  }
-  .q-card .remove-btn:hover { border-color: var(--red); color: var(--red); }
+  .remove-btn:hover { border-color: var(--red); color: var(--red); }
 
   .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
-  .field-row.three { grid-template-columns: 2fr 1fr 1fr; }
   .field-row.full { grid-template-columns: 1fr; }
-
   .field label { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; color: var(--muted); margin-bottom: 6px; }
-
   .field input, .field select {
-    width: 100%;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    color: var(--text);
-    font-size: 1rem;
-    padding: 10px 14px;
-    outline: none;
-    transition: border-color 0.15s;
+    width: 100%; background: var(--bg); border: 1px solid var(--border);
+    border-radius: 10px; color: var(--text); font-size: 1rem; padding: 10px 14px; outline: none;
   }
   .field input:focus, .field select:focus { border-color: var(--accent); }
   .field select option { background: var(--bg); }
 
-  .divider {
-    text-align: center;
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: var(--muted);
-    margin: 4px 0 16px;
-    text-transform: uppercase;
-  }
+  .divider { text-align: center; font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; color: var(--muted); margin: 4px 0 16px; text-transform: uppercase; }
 
   #add-btn {
-    display: block;
-    width: 100%;
-    padding: 16px;
-    background: none;
-    border: 2px dashed var(--border);
-    border-radius: 16px;
-    color: var(--muted);
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    margin-bottom: 32px;
-    transition: border-color 0.15s, color 0.15s;
+    display: block; width: 100%; padding: 16px;
+    background: none; border: 2px dashed var(--border); border-radius: 16px;
+    color: var(--muted); font-size: 1rem; font-weight: 600; cursor: pointer; margin-bottom: 32px;
   }
   #add-btn:hover { border-color: var(--accent); color: var(--accent); }
 
   .btn-primary {
-    display: block;
-    width: 100%;
-    padding: 20px;
-    background: var(--accent);
-    color: #000;
-    border: none;
-    border-radius: 16px;
-    font-size: 1.4rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: opacity 0.15s;
+    display: block; width: 100%; padding: 20px;
+    background: var(--accent); color: #000; border: none; border-radius: 16px;
+    font-size: 1.4rem; font-weight: 900; letter-spacing: 1px; cursor: pointer; text-transform: uppercase;
   }
   .btn-primary:hover { opacity: 0.88; }
 
-  /* ── GAME ── */
   #game { display: none; width: 100%; max-width: 680px; padding: 40px 24px 80px; text-align: center; }
-
   .progress { font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-bottom: 36px; }
-
   .category-label { font-size: 1.1rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 28px; }
-
   .item-name { font-size: 3.2rem; font-weight: 900; letter-spacing: -1px; line-height: 1.05; text-transform: uppercase; }
   .item-value { font-size: 1.6rem; font-weight: 700; color: var(--accent); margin-top: 10px; }
-
-  .vs-block {
-    margin: 32px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-  }
+  .vs-block { margin: 32px 0; display: flex; flex-direction: column; align-items: center; }
   .vs-line { font-size: 2.2rem; font-weight: 900; color: var(--muted); letter-spacing: 2px; }
-
   .challenger-name { font-size: 3.2rem; font-weight: 900; letter-spacing: -1px; line-height: 1.05; text-transform: uppercase; }
-
-  .hl-prompt {
-    margin: 32px 0 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-  }
+  .hl-prompt { margin: 32px 0 40px; display: flex; flex-direction: column; align-items: center; gap: 2px; }
   .hl-word { font-size: 2.4rem; font-weight: 900; color: var(--muted); letter-spacing: 2px; }
   .hl-or { font-size: 1rem; font-weight: 700; color: var(--border); letter-spacing: 3px; text-transform: uppercase; }
 
   #reveal-btn {
-    padding: 22px 60px;
-    background: var(--accent);
-    color: #000;
-    border: none;
-    border-radius: 16px;
-    font-size: 1.5rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: opacity 0.15s;
+    padding: 22px 60px; background: var(--accent); color: #000; border: none;
+    border-radius: 16px; font-size: 1.5rem; font-weight: 900; letter-spacing: 1px;
+    text-transform: uppercase; cursor: pointer;
   }
   #reveal-btn:hover { opacity: 0.88; }
 
-  /* ── ANSWER ── */
   #answer { display: none; }
-
   .result-name { font-size: 3.2rem; font-weight: 900; letter-spacing: -1px; text-transform: uppercase; line-height: 1.05; }
   .result-value { font-size: 1.6rem; font-weight: 700; color: var(--muted); margin-top: 10px; }
-
-  .verdict {
-    font-size: 4rem;
-    font-weight: 900;
-    letter-spacing: 2px;
-    margin: 28px 0 20px;
-    text-transform: uppercase;
-  }
+  .verdict { font-size: 4rem; font-weight: 900; letter-spacing: 2px; margin: 28px 0 20px; text-transform: uppercase; }
   .verdict.higher { color: var(--green); }
   .verdict.lower  { color: var(--red); }
   .verdict.same   { color: var(--neutral); }
-
   .context { font-size: 1.1rem; color: var(--muted); margin-bottom: 28px; }
-
   .source-link {
-    display: inline-block;
-    padding: 12px 28px;
-    border: 2px solid var(--border);
-    border-radius: 12px;
-    color: var(--muted);
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-    transition: border-color 0.15s, color 0.15s;
+    display: inline-block; padding: 12px 28px; border: 2px solid var(--border);
+    border-radius: 12px; color: var(--muted); text-decoration: none; font-size: 0.9rem;
+    font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 40px;
   }
   .source-link:hover { border-color: var(--text); color: var(--text); }
 
   #next-btn {
-    display: block;
-    width: 100%;
-    padding: 20px;
-    background: var(--card);
-    border: 2px solid var(--border);
-    border-radius: 16px;
-    color: var(--text);
-    font-size: 1.4rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: border-color 0.15s;
+    display: block; width: 100%; padding: 20px; background: var(--card);
+    border: 2px solid var(--border); border-radius: 16px; color: var(--text);
+    font-size: 1.4rem; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; cursor: pointer;
   }
   #next-btn:hover { border-color: var(--accent); }
 
-  /* ── END ── */
   #end { display: none; width: 100%; max-width: 480px; padding: 80px 24px; text-align: center; }
   #end .end-title { font-size: 2rem; font-weight: 900; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
   #end h2 { font-size: 3rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 48px; }
   #end .btn-primary { margin-bottom: 16px; }
   #end .btn-secondary {
-    display: block;
-    width: 100%;
-    padding: 18px;
-    background: none;
-    border: 2px solid var(--border);
-    border-radius: 16px;
-    color: var(--muted);
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: border-color 0.15s, color 0.15s;
+    display: block; width: 100%; padding: 18px; background: none;
+    border: 2px solid var(--border); border-radius: 16px; color: var(--muted);
+    font-size: 1.1rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; cursor: pointer;
   }
   #end .btn-secondary:hover { border-color: var(--text); color: var(--text); }
 
   @media (max-width: 520px) {
-    .field-row, .field-row.three { grid-template-columns: 1fr; }
+    .field-row { grid-template-columns: 1fr; }
     .item-name, .challenger-name, .result-name { font-size: 2.2rem; }
     .verdict { font-size: 3rem; }
   }
@@ -259,178 +136,171 @@
 </head>
 <body>
 
-<!-- SETUP -->
 <section id="setup">
   <h1>Higher or Lower</h1>
   <p class="subtitle">Build your questions, then start the game.</p>
   <div id="questions-container"></div>
   <button id="add-btn">+ Add another question</button>
-  <button class="btn-primary" onclick="startGame()">Start Game</button>
+  <button id="start-btn" class="btn-primary">Start Game</button>
 </section>
 
-<!-- GAME -->
 <section id="game">
   <p class="progress" id="progress"></p>
   <div id="question-view">
     <p class="category-label" id="g-category"></p>
     <div class="item-name" id="g-item1"></div>
     <div class="item-value" id="g-val1"></div>
-    <div class="vs-block">
-      <div class="vs-line">VS</div>
-    </div>
+    <div class="vs-block"><div class="vs-line">VS</div></div>
     <div class="challenger-name" id="g-item2"></div>
     <div class="hl-prompt">
       <div class="hl-word">HIGHER</div>
       <div class="hl-or">or</div>
       <div class="hl-word">LOWER?</div>
     </div>
-    <button id="reveal-btn" onclick="revealAnswer()">Reveal Answer</button>
+    <button id="reveal-btn">Reveal Answer</button>
   </div>
-
   <div id="answer">
     <p class="category-label" id="a-category"></p>
     <div class="result-name" id="a-item2"></div>
     <div class="result-value" id="a-val2"></div>
     <div class="verdict" id="a-verdict"></div>
     <p class="context" id="a-context"></p>
-    <a id="a-source" class="source-link" href="#" target="_blank" rel="noopener">View Source ↗</a>
-    <button id="next-btn" onclick="nextQuestion()"></button>
+    <a id="a-source" class="source-link" href="#" target="_blank" rel="noopener">View Source &#8599;</a>
+    <button id="next-btn"></button>
   </div>
 </section>
 
-<!-- END -->
 <section id="end">
   <p class="end-title">That's it!</p>
   <h2>Higher or Lower</h2>
-  <button class="btn-primary" onclick="playAgain()">Play Again</button>
-  <button class="btn-secondary" onclick="newGame()">Create New Game</button>
+  <button id="play-again-btn" class="btn-primary">Play Again</button>
+  <button id="new-game-btn" class="btn-secondary">Create New Game</button>
 </section>
 
 <script>
-const CATEGORIES = [
-  '🌍 Places', '🎬 Films & TV', '🎵 Music', '⚽ Sport',
-  '🍔 Food', '🧠 General knowledge', '💷 Ridiculous prices',
-  '🏛️ Government', '🤖 Technology', '🎲 Completely random'
+var CATEGORIES = [
+  '🌍 Places',
+  '🎬 Films & TV',
+  '🎵 Music',
+  '⚽ Sport',
+  '🍔 Food',
+  '🧠 General knowledge',
+  '💷 Ridiculous prices',
+  '🏛 Government',
+  '🤖 Technology',
+  '🎲 Completely random'
 ];
 
-let questions = [];
-let current = 0;
+var questions = [];
+var current = 0;
 
-// ── SETUP ──────────────────────────────────────────────
+function show(screen) {
+  document.getElementById('setup').style.display = screen === 'setup' ? 'block' : 'none';
+  document.getElementById('game').style.display   = screen === 'game'  ? 'block' : 'none';
+  document.getElementById('end').style.display    = screen === 'end'   ? 'block' : 'none';
+}
 
-function addQuestion(data = {}) {
-  const idx = document.querySelectorAll('.q-card').length;
-  const id = Date.now() + idx;
-  const card = document.createElement('div');
+function addQuestion() {
+  var idx = document.querySelectorAll('.q-card').length;
+  var card = document.createElement('div');
   card.className = 'q-card';
-  card.dataset.id = id;
 
-  const catOptions = CATEGORIES.map(c =>
-    `<option value="${c}" ${data.category === c ? 'selected' : ''}>${c}</option>`
-  ).join('');
+  var opts = '<option value="">— pick one —</option>';
+  for (var i = 0; i < CATEGORIES.length; i++) {
+    opts += '<option value="' + CATEGORIES[i] + '">' + CATEGORIES[i] + '</option>';
+  }
 
-  card.innerHTML = `
-    <p class="q-num">Question <span class="q-index"></span></p>
-    <button class="remove-btn" onclick="removeQuestion(this)">Remove</button>
-    <div class="field-row full">
-      <div class="field">
-        <label>Category</label>
-        <select name="category"><option value="">— pick one —</option>${catOptions}</select>
-      </div>
-    </div>
-    <div class="field-row">
-      <div class="field"><label>First item</label><input name="item1" placeholder="e.g. Eiffel Tower" value="${data.item1||''}"></div>
-      <div class="field"><label>First item's value</label><input name="val1" type="number" placeholder="e.g. 330" value="${data.val1||''}"></div>
-    </div>
-    <div class="field-row three">
-      <div class="field"><label>Unit / measurement</label><input name="unit" placeholder="e.g. metres" value="${data.unit||''}"></div>
-    </div>
-    <div class="divider">vs</div>
-    <div class="field-row">
-      <div class="field"><label>Second item</label><input name="item2" placeholder="e.g. The Shard" value="${data.item2||''}"></div>
-      <div class="field"><label>Second item's value</label><input name="val2" type="number" placeholder="e.g. 309.6" value="${data.val2||''}"></div>
-    </div>
-    <div class="field-row full">
-      <div class="field"><label>Source URL</label><input name="source" type="url" placeholder="https://..." value="${data.source||''}"></div>
-    </div>
-  `;
+  card.innerHTML =
+    '<p class="q-num">Question <span class="q-index"></span></p>' +
+    '<button class="remove-btn" type="button">Remove</button>' +
+    '<div class="field-row full"><div class="field"><label>Category</label>' +
+    '<select name="category">' + opts + '</select></div></div>' +
+    '<div class="field-row">' +
+    '<div class="field"><label>First item</label><input name="item1" placeholder="e.g. Eiffel Tower"></div>' +
+    '<div class="field"><label>First item\'s value</label><input name="val1" type="number" placeholder="e.g. 330"></div>' +
+    '</div>' +
+    '<div class="field-row full"><div class="field"><label>Unit / measurement</label><input name="unit" placeholder="e.g. metres"></div></div>' +
+    '<div class="divider">vs</div>' +
+    '<div class="field-row">' +
+    '<div class="field"><label>Second item</label><input name="item2" placeholder="e.g. The Shard"></div>' +
+    '<div class="field"><label>Second item\'s value</label><input name="val2" type="number" placeholder="e.g. 309.6"></div>' +
+    '</div>' +
+    '<div class="field-row full"><div class="field"><label>Source URL</label><input name="source" type="url" placeholder="https://..."></div></div>';
+
+  card.querySelector('.remove-btn').addEventListener('click', function() {
+    card.parentNode.removeChild(card);
+    reindex();
+  });
+
   document.getElementById('questions-container').appendChild(card);
   reindex();
 }
 
-function removeQuestion(btn) {
-  btn.closest('.q-card').remove();
-  reindex();
-}
-
 function reindex() {
-  document.querySelectorAll('.q-card .q-index').forEach((el, i) => el.textContent = i + 1);
+  var spans = document.querySelectorAll('.q-card .q-index');
+  for (var i = 0; i < spans.length; i++) spans[i].textContent = i + 1;
 }
 
 function readQuestions() {
-  return [...document.querySelectorAll('.q-card')].map(card => ({
-    category: card.querySelector('[name=category]').value,
-    item1:    card.querySelector('[name=item1]').value.trim(),
-    val1:     parseFloat(card.querySelector('[name=val1]').value),
-    unit:     card.querySelector('[name=unit]').value.trim(),
-    item2:    card.querySelector('[name=item2]').value.trim(),
-    val2:     parseFloat(card.querySelector('[name=val2]').value),
-    source:   card.querySelector('[name=source]').value.trim(),
-  }));
+  var cards = document.querySelectorAll('.q-card');
+  var result = [];
+  for (var i = 0; i < cards.length; i++) {
+    var c = cards[i];
+    result.push({
+      category: c.querySelector('[name=category]').value,
+      item1:    c.querySelector('[name=item1]').value.trim(),
+      val1:     parseFloat(c.querySelector('[name=val1]').value),
+      unit:     c.querySelector('[name=unit]').value.trim(),
+      item2:    c.querySelector('[name=item2]').value.trim(),
+      val2:     parseFloat(c.querySelector('[name=val2]').value),
+      source:   c.querySelector('[name=source]').value.trim()
+    });
+  }
+  return result;
 }
 
 function startGame() {
-  const qs = readQuestions();
+  var qs = readQuestions();
   if (!qs.length) { alert('Add at least one question first.'); return; }
-  const invalid = qs.find(q => !q.item1 || !q.item2 || isNaN(q.val1) || isNaN(q.val2));
-  if (invalid) { alert('Please fill in both items and values for every question.'); return; }
+  for (var i = 0; i < qs.length; i++) {
+    var q = qs[i];
+    if (!q.item1 || !q.item2 || isNaN(q.val1) || isNaN(q.val2)) {
+      alert('Please fill in both items and values for every question.'); return;
+    }
+  }
   questions = qs;
   current = 0;
   show('game');
   loadQuestion();
 }
 
-// ── GAME ───────────────────────────────────────────────
-
-function show(screen) {
-  ['setup','game','end'].forEach(id => {
-    document.getElementById(id).style.display = id === screen ? 'block' : 'none';
-  });
-}
-
 function loadQuestion() {
-  const q = questions[current];
-  document.getElementById('progress').textContent = `Question ${current + 1} of ${questions.length}`;
+  var q = questions[current];
+  document.getElementById('progress').textContent = 'Question ' + (current + 1) + ' of ' + questions.length;
   document.getElementById('g-category').textContent = q.category;
   document.getElementById('g-item1').textContent = q.item1.toUpperCase();
-  document.getElementById('g-val1').textContent = `${q.val1} ${q.unit}`;
+  document.getElementById('g-val1').textContent = q.val1 + ' ' + q.unit;
   document.getElementById('g-item2').textContent = q.item2.toUpperCase();
-
   document.getElementById('question-view').style.display = 'block';
   document.getElementById('answer').style.display = 'none';
 }
 
 function revealAnswer() {
-  const q = questions[current];
-  const isHigher = q.val2 > q.val1;
-  const isSame   = q.val2 === q.val1;
-
-  const verdictEl = document.getElementById('a-verdict');
-  verdictEl.textContent = isSame ? '= THE SAME' : isHigher ? '↑ HIGHER' : '↓ LOWER';
-  verdictEl.className = 'verdict ' + (isSame ? 'same' : isHigher ? 'higher' : 'lower');
-
+  var q = questions[current];
+  var higher = q.val2 > q.val1;
+  var same   = q.val2 === q.val1;
+  var v = document.getElementById('a-verdict');
+  v.textContent = same ? '= THE SAME' : higher ? '↑ HIGHER' : '↓ LOWER';
+  v.className = 'verdict ' + (same ? 'same' : higher ? 'higher' : 'lower');
   document.getElementById('a-category').textContent = q.category;
   document.getElementById('a-item2').textContent = q.item2.toUpperCase();
-  document.getElementById('a-val2').textContent = `${q.val2} ${q.unit}`;
-  document.getElementById('a-context').textContent = `${q.item1} is ${q.val1} ${q.unit}.`;
-
-  const srcEl = document.getElementById('a-source');
-  if (q.source) { srcEl.href = q.source; srcEl.style.display = ''; }
-  else { srcEl.style.display = 'none'; }
-
-  const isLast = current === questions.length - 1;
-  document.getElementById('next-btn').textContent = isLast ? 'See Results →' : 'Next Question →';
-
+  document.getElementById('a-val2').textContent = q.val2 + ' ' + q.unit;
+  document.getElementById('a-context').textContent = q.item1 + ' is ' + q.val1 + ' ' + q.unit + '.';
+  var src = document.getElementById('a-source');
+  if (q.source) { src.href = q.source; src.style.display = 'inline-block'; }
+  else { src.style.display = 'none'; }
+  var isLast = current === questions.length - 1;
+  document.getElementById('next-btn').textContent = isLast ? 'See Results \u2192' : 'Next Question \u2192';
   document.getElementById('question-view').style.display = 'none';
   document.getElementById('answer').style.display = 'block';
 }
@@ -441,10 +311,6 @@ function nextQuestion() {
   loadQuestion();
 }
 
-// ── END ────────────────────────────────────────────────
-
-function playAgain() { current = 0; show('game'); loadQuestion(); }
-
 function newGame() {
   questions = [];
   document.getElementById('questions-container').innerHTML = '';
@@ -452,7 +318,13 @@ function newGame() {
   show('setup');
 }
 
-// ── INIT ───────────────────────────────────────────────
+document.getElementById('add-btn').addEventListener('click', addQuestion);
+document.getElementById('start-btn').addEventListener('click', startGame);
+document.getElementById('reveal-btn').addEventListener('click', revealAnswer);
+document.getElementById('next-btn').addEventListener('click', nextQuestion);
+document.getElementById('play-again-btn').addEventListener('click', function() { current = 0; show('game'); loadQuestion(); });
+document.getElementById('new-game-btn').addEventListener('click', newGame);
+
 addQuestion();
 </script>
 </body>
