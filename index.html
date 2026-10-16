@@ -394,7 +394,7 @@ function startGame() {
 
 function show(screen) {
   ['setup','game','end'].forEach(id => {
-    document.getElementById(id).style.display = id === screen ? '' : 'none';
+    document.getElementById(id).style.display = id === screen ? 'block' : 'none';
   });
 }
 
@@ -406,7 +406,7 @@ function loadQuestion() {
   document.getElementById('g-val1').textContent = `${q.val1} ${q.unit}`;
   document.getElementById('g-item2').textContent = q.item2.toUpperCase();
 
-  document.getElementById('question-view').style.display = '';
+  document.getElementById('question-view').style.display = 'block';
   document.getElementById('answer').style.display = 'none';
 }
 
@@ -432,7 +432,7 @@ function revealAnswer() {
   document.getElementById('next-btn').textContent = isLast ? 'See Results →' : 'Next Question →';
 
   document.getElementById('question-view').style.display = 'none';
-  document.getElementById('answer').style.display = '';
+  document.getElementById('answer').style.display = 'block';
 }
 
 function nextQuestion() {
